@@ -62,3 +62,27 @@
     `position:absolute; left right top bottom 등의 위치좌표 추가작성`
 `}`
 * after, before가 적용된 선택자에 `position:relative` 기준잡기
+# form 태그
+## form태그와 action, method
+* `form` : 입력선택태그의 묶음태그
+    * 검색, 로그인, 회원가입 등의 특정 주제로 묶여있는 그룹
+* `action` : get, post 데이터 전송 방식 선택
+    * 그룹에 작성 또는 선택된 사용자 정보를 전달하는 서버 주소
+* `method` : url 지정 속성
+    * 데이터를 보내는 전송방식
+## input 속성
+* 입력,선택 태그속성
+* 사용자가 입력, 선택할때 작성한느 시작태그 (type필수)
+* type : **작성 종류에 따라** type 선택
+## name 속성
+* 요소 이름, 요소그룹 묶기용
+* action으로 저장된 사이트 서버위치에 사용자가 입력한 데이터를 전송할 때 구분하는 데이터 명칭
+* 이름 tom, 아이디 tom 값만 보고 구분을 정확히 못하는 경우 name 필수
+* userName => tom, userId => tom `name="userName"`
+* 선택양식에서는 name의미를 그룹명으로 사요으 위 작성 내용은 입력 양식에 해당
+## value 속성
+* 고정값(기본값) 태그
+* 입력양식 : 처음부터 입력된 초기값(쇼핑몰수량1)
+* 선택양식 : 위 name 처럼 데이터 구분명칭
+## id, class 속성
+* js, css 에서 구분하기 위한 디자인 또는 동적 프로그래밍 용도 이름
