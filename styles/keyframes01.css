@@ -1,0 +1,86 @@
+/* 키프레임01 .css */
+/* 공통 */
+h1 {margin: 10px 15px 30px;}
+.map {background: #eee; padding: 15px;}
+.map .ball {
+    width: 100px; height: 100px;
+    display: block;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #000, #fff);
+}
+.map .ball img {width: 100%;}
+.map span[class*=txt] {
+    font-size: 2rem; display: block; text-align: center;
+    line-height: 1.3; font-weight: 300;
+}
+.map5 {display: flex; justify-content: center; padding: 50px;}
+.map5 span[class*=txt] {
+    font-size: 4rem;
+    line-height: 1.3; font-weight: 600;
+}
+.map6 .bg {
+    background-image: url(../images/bg.jpg);
+    background-size: auto 100px;
+    display: block; width: 300px; height: 100px;
+    animation: bgInfinite 50s linear infinite;
+}
+/* -----------------------------------------개별 */
+@keyframes bgInfinite {
+    0% {background-position-x: 0;}
+    100% {background-position-x: 5000px;}
+}
+/* animation: 불러올키프레임이름 지속시간 */
+/* :hover, transition은 사용자의 동작(이벤트)와 함께 애니메이션을 만들 때 */
+/* animation, keyframes은 사용자의 동작 관계없이 자동으로 시작하고 끝나는 애니메이션을 제작할 때 */
+.map1 .ball {animation: right600 2s ease 1s 2 alternate-reverse both;}
+/* 위 해석 1초 뒤에 1초동안 2번 재생 */
+.map2 .ball {animation: left50 1.5s linear 2s infinite alternate;}
+/* 위 해석 2초 뒤에 1.5초 동안 무한재생 */
+.map3 .ball img {animation: rotate360 0.5s linear infinite}
+.map3 .ball {animation: right400 1s linear infinite alternate}
+.map4 .txt1 {animation: txtDisplay_v1 1s;}
+.map4 .txt2 {opacity: 0; animation: txtpopol  1s 0.5s both;}
+
+.map5 .txt3 {animation: txtDisplay_v1 1s;}
+.map5 .txt3 {opacity: 0; animation: txtpopol  1s 0.5s both;}
+.map5 .txt4 {animation: txtDisplay_v1 2s;}
+.map5 .txt4 {opacity: 0; animation: txtpopol  2s 0.5s both;}
+.map5 .txt5 {animation: txtDisplay_v1 3s;}
+.map5 .txt5 {opacity: 0; animation: txtpopol  3s 0.5s both;}
+.map5 .txt6 {animation: txtDisplay_v1 4s;}
+.map5 .txt6 {opacity: 0; animation: txtpopol  4s 0.5s both;}
+.map5 .txt7 {animation: txtDisplay_v1 5s;}
+.map5 .txt7 {opacity: 0; animation: txtpopol  5s 0.5s both;}
+/* 애니메이션 키프레임 css파일 별도 권장 */
+/* 
+    @keyframes 애니메이션 생성명 {
+        0% {시작 장면속성: 값; }
+        50% {중간 장면속성: 값; }
+        100% {종료 장면속성: 값; }
+    }
+*/
+@keyframes right600 {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(600px);}
+}
+@keyframes left50 {
+    0% {transform: translateX(400px);}
+    100% {transform: translateX(50px);}
+}
+@keyframes rotate360 {
+    0% {transform: rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+@keyframes right400 {
+    0% {transform: translateX(0);}
+    100% {transform:translateX(400px);}
+}
+/* 글자 한줄씩 나타나는 필요 속성 : 위 아래 이동, 투명-> 불투명, 점점 선명하게 */
+@keyframes txtDisplay_v1 {
+    0% {transform: translateY(-15px); opacity: 0; filter: blur(10px);}
+    100% {transform: translateY(0); opacity: 1; filter: blur(0);}
+}
+@keyframes txtpopol {
+    0% {transform: translateX(20px); opacity: 0; filter: blur(6px);}
+    100% {transform: translateX(0); opacity: 2; filter: blur(0);}
+}
