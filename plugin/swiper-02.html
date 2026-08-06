@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Document</title>
+    <!--swiper 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--swiper 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <style>
+        /* 연습용 내부스타일시트 css 위치 */
+        /* swiper 내장 css - swiper플러그인에 기본내장된 css는 디자인 시 사용금지 */
+        /* swiper -> overflow:hidden; position:relative; */
+        /* swiper-wrpper -> position:relative; width:max-content; transform;  */
+        /* swiper-slide -> position:relative; (가로크기급지) */
+        /* swiper-button-prev, next는 absolute 기본내장 */
+        /* 여기어때 클론코딩 */
+        .yeogi {
+            width: 1200px; margin: 100px auto; background-color: #f5f5f5;
+        }
+        .yeogi h1 {}
+        .yeogi .popular_wrap {position: relative;}
+        .yeogi .popular_wrap .popular_prev {transform: translateX(-50px);}
+        .yeogi .popular_wrap .popular_next {transform: translateX(50px);}
+        .yeogi .korea_popular_slide {}
+        .yeogi .korea_popular_slide .swiper-wrapper {}
+        .yeogi .korea_popular_slide .swiper-wrapper .swiper-slide {
+        }
+        .yeogi .korea_popular_slide .swiper-wrapper .swiper-slide a {}
+        .yeogi .korea_popular_slide .swiper-wrapper .swiper-slide a .photo {
+            border-radius: 8px; overflow: hidden;
+            height: 200px;
+        }
+        .yeogi .korea_popular_slide .swiper-wrapper .swiper-slide a .photo img {width: auto; height: 100%;}
+        .yeogi .korea_popular_slide .swiper-wrapper .swiper-slide a h2 {}
+
+        /* -------------------- 패키지 페이지 */
+        .yeogi_pakage {
+            width: 1100px; margin: 100px auto; background-color: greenyellow;
+        }
+        .yeogi_pakage h1 {
+            padding: 30px; font-size: 2rem; font-weight: 500;
+        }
+        .yeogi_pakage .pakage_wrap {position: relative;}
+        .yeogi_pakage .pakage_wrap .pakage_prev {transform: translateX(-30px);}
+        .yeogi_pakage .pakage_wrap .pakage_next {transform: translateX(30px);}
+        /* swiper prev, next 버튼요소는 기본적으로 svg 이미지를 내장하고 있음. */
+        /* .yeogi_pakage .pakage_wrap .pakage_prev,
+        .yeogi_pakage .pakage_wrap .pakage_next {background-color: yellow;}
+        .yeogi_pakage .pakage_wrap .pakage_prev svg,
+        .yeogi_pakage .pakage_wrap .pakage_next svg {color: red;} */
+
+        /* 버튼 모양 변경하고싶은 경우 */
+        .yeogi_pakage .pakage_wrap .pakage_prev,
+        .yeogi_pakage .pakage_wrap .pakage_next {background-color: yellow; border-radius: 50%;}
+        .yeogi_pakage .pakage_wrap .pakage_prev svg,
+        .yeogi_pakage .pakage_wrap .pakage_next svg {display: none;}
+        .yeogi_pakage .pakage_slide {}
+        .yeogi_pakage .pakage_slide .swiper-wrapper {}
+        .yeogi_pakage .pakage_slide .swiper-wrapper .swiper-slide {}
+        .yeogi_pakage .pakage_slide .swiper-wrapper .swiper-slide a {
+            display: flex; flex-flow: column;
+            gap: 20px;
+        }
+        .yeogi_pakage .pakage_slide .swiper-wrapper .swiper-slide a .view {
+            border-radius: 20px; overflow: hidden;
+            height: 220px;
+        }
+        .yeogi_pakage .pakage_slide .swiper-wrapper .swiper-slide a .view img {width: auto; height: 100%;}
+        .yeogi_pakage .pakage_slide .swiper-wrapper .swiper-slide a p {}
+        .yeogi_pakage .pakage_slide .swiper-wrapper .swiper-slide a p+h2 {font-weight: 500;}
+        .yeogi_pakage .pakage_slide .swiper-wrapper .swiper-slide a .price {}
+        .yeogi_pakage .pakage_slide .swiper-wrapper .swiper-slide a .price > span {font-size: 1.3rem; font-weight: 600;}
+        /* 트립닷컴 클론코딩 */
+    </style>
+</head>
+<body>
+    <!-- 여기어때 -->
+    <section class="yeogi">
+        <h1>국내 인기 여행지</h1>
+        <div class="popular_wrap">
+            <div class="swiper korea_popular_slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide travell">
+                        <a href="#">
+                            <p class="photo"><img src="https://www.agoda.com/wp-content/uploads/2024/07/Jeju-Island-1244x700.jpg" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel2">
+                        <a href="#">
+                            <p class="photo"><img src="https://www.agoda.com/wp-content/uploads/2024/07/Jeju-Island-1244x700.jpg" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel3">
+                        <a href="#">
+                            <p class="photo"><img src="https://www.agoda.com/wp-content/uploads/2024/07/Jeju-Island-1244x700.jpg" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel4">
+                        <a href="#">
+                            <p class="photo"><img src="https://www.agoda.com/wp-content/uploads/2024/07/Jeju-Island-1244x700.jpg" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel5">
+                        <a href="#">
+                            <p class="photo"><img src="https://www.agoda.com/wp-content/uploads/2024/07/Jeju-Island-1244x700.jpg" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel6">
+                        <a href="#">
+                            <p class="photo"><img src="https://www.agoda.com/wp-content/uploads/2024/07/Jeju-Island-1244x700.jpg" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel7">
+                        <a href="#">
+                            <p class="photo"><img src="https://www.agoda.com/wp-content/uploads/2024/07/Jeju-Island-1244x700.jpg" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel8">
+                        <a href="#">
+                            <p class="photo"><img src="https://www.agoda.com/wp-content/uploads/2024/07/Jeju-Island-1244x700.jpg" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel9">
+                        <a href="#">
+                            <p class="photo"><img src="https://www.agoda.com/wp-content/uploads/2024/07/Jeju-Island-1244x700.jpg" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel10">
+                        <a href="#">
+                            <p class="photo"><img src="https://www.agoda.com/wp-content/uploads/2024/07/Jeju-Island-1244x700.jpg" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev popular_prev"></div>
+            <div class="swiper-button-next popular_next"></div>
+        </div>
+    </section>
+    
+    <section class="yeogi_pakage">
+        <h1>패키지 홈쇼핑 방영상품</h1>
+        <div class="pakage_wrap">
+            <div class="swiper pakage_slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide pakage1">
+                        <a href="#">
+                            <p class="view"><img src="https://image1.onlinetour.co.kr/resize.php?w=2400&u=https://image1.onlinetour.co.kr/obms_images/tour_info/CN/2022020914532966DD0B1E7A7846CFB3FC61A679BC6E60.jpg" alt=""></p>
+                            <p>4박 5일 · 부산출발</p>
+                            <h2>Hot세일[노팁/6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><span>449,000</span>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide pakage2">
+                        <a href="#">
+                            <p class="view"><img src="https://image1.onlinetour.co.kr/resize.php?w=2400&u=https://image1.onlinetour.co.kr/obms_images/tour_info/CN/2022020914532966DD0B1E7A7846CFB3FC61A679BC6E60.jpg" alt=""></p>
+                            <p>4박 5일 · 부산출발</p>
+                            <h2>Hot세일[노팁/6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><span>449,000</span>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide pakage3">
+                        <a href="#">
+                            <p class="view"><img src="https://image1.onlinetour.co.kr/resize.php?w=2400&u=https://image1.onlinetour.co.kr/obms_images/tour_info/CN/2022020914532966DD0B1E7A7846CFB3FC61A679BC6E60.jpg" alt=""></p>
+                            <p>4박 5일 · 부산출발</p>
+                            <h2>Hot세일[노팁/6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><span>449,000</span>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide pakage4">
+                        <a href="#">
+                            <p class="view"><img src="https://image1.onlinetour.co.kr/resize.php?w=2400&u=https://image1.onlinetour.co.kr/obms_images/tour_info/CN/2022020914532966DD0B1E7A7846CFB3FC61A679BC6E60.jpg" alt=""></p>
+                            <p>4박 5일 · 부산출발</p>
+                            <h2>Hot세일[노팁/6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><span>449,000</span>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide pakage5">
+                        <a href="#">
+                            <p class="view"><img src="https://image1.onlinetour.co.kr/resize.php?w=2400&u=https://image1.onlinetour.co.kr/obms_images/tour_info/CN/2022020914532966DD0B1E7A7846CFB3FC61A679BC6E60.jpg" alt=""></p>
+                            <p>4박 5일 · 부산출발</p>
+                            <h2>Hot세일[노팁/6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><span>449,000</span>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide pakage6">
+                        <a href="#">
+                            <p class="view"><img src="https://image1.onlinetour.co.kr/resize.php?w=2400&u=https://image1.onlinetour.co.kr/obms_images/tour_info/CN/2022020914532966DD0B1E7A7846CFB3FC61A679BC6E60.jpg" alt=""></p>
+                            <p>4박 5일 · 부산출발</p>
+                            <h2>Hot세일[노팁/6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><span>449,000</span>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide pakage7">
+                        <a href="#">
+                            <p class="view"><img src="https://image1.onlinetour.co.kr/resize.php?w=2400&u=https://image1.onlinetour.co.kr/obms_images/tour_info/CN/2022020914532966DD0B1E7A7846CFB3FC61A679BC6E60.jpg" alt=""></p>
+                            <p>4박 5일 · 부산출발</p>
+                            <h2>Hot세일[노팁/6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><span>449,000</span>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide pakage8">
+                        <a href="#">
+                            <p class="view"><img src="https://image1.onlinetour.co.kr/resize.php?w=2400&u=https://image1.onlinetour.co.kr/obms_images/tour_info/CN/2022020914532966DD0B1E7A7846CFB3FC61A679BC6E60.jpg" alt=""></p>
+                            <p>4박 5일 · 부산출발</p>
+                            <h2>Hot세일[노팁/6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><span>449,000</span>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide pakage9">
+                        <a href="#">
+                            <p class="view"><img src="https://image1.onlinetour.co.kr/resize.php?w=2400&u=https://image1.onlinetour.co.kr/obms_images/tour_info/CN/2022020914532966DD0B1E7A7846CFB3FC61A679BC6E60.jpg" alt=""></p>
+                            <p>4박 5일 · 부산출발</p>
+                            <h2>Hot세일[노팁/6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><span>449,000</span>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide pakage10">
+                        <a href="#">
+                            <p class="view"><img src="https://image1.onlinetour.co.kr/resize.php?w=2400&u=https://image1.onlinetour.co.kr/obms_images/tour_info/CN/2022020914532966DD0B1E7A7846CFB3FC61A679BC6E60.jpg" alt=""></p>
+                            <p>4박 5일 · 부산출발</p>
+                            <h2>Hot세일[노팁/6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><span>449,000</span>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide pakage11">
+                        <a href="#">
+                            <p class="view"><img src="https://image1.onlinetour.co.kr/resize.php?w=2400&u=https://image1.onlinetour.co.kr/obms_images/tour_info/CN/2022020914532966DD0B1E7A7846CFB3FC61A679BC6E60.jpg" alt=""></p>
+                            <p>4박 5일 · 부산출발</p>
+                            <h2>Hot세일[노팁/6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><span>449,000</span>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide pakage12">
+                        <a href="#">
+                            <p class="view"><img src="https://image1.onlinetour.co.kr/resize.php?w=2400&u=https://image1.onlinetour.co.kr/obms_images/tour_info/CN/2022020914532966DD0B1E7A7846CFB3FC61A679BC6E60.jpg" alt=""></p>
+                            <p>4박 5일 · 부산출발</p>
+                            <h2>Hot세일[노팁/6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><span>449,000</span>원</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev pakage_prev"></div>
+            <div class="swiper-button-next pakage_next"></div>
+        </div>
+    </section>
+
+
+    <!-- 트립닷컴 -->
+
+
+    <script>
+        // 연습용 내부스크립트 js 위치
+        // 여기어때 클론스크립트
+        const yeogiSlide = new Swiper('.korea_popular_slide',{
+            slidesPerView:6,
+            spaceBetween:15,
+            navigation:{
+                prevEl:'.popular_prev',//공통 이름이 아닌 개별이름으로 연결
+                nextEl:'.popular_next',
+            },
+        });
+
+        // 패키지 페이지
+        const pakageSlide = new Swiper('.pakage_slide',{
+            slidesPerView:4,
+            spaceBetween: 20,
+            navigation:{
+                prevEl:'.pakage_prev',//공통 이름이 아닌 개별이름으로 연결
+                nextEl:'.pakage_next',
+            },
+        });
+        // 트립닷컴 클론스크립트
+    </script>
+</body>
+</html>
