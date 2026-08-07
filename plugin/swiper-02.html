@@ -79,6 +79,83 @@
         .yeogi_pakage .pakage_slide .swiper-wrapper .swiper-slide a .price {}
         .yeogi_pakage .pakage_slide .swiper-wrapper .swiper-slide a .price > span {font-size: 1.3rem; font-weight: 600;}
         /* 트립닷컴 클론코딩 */
+        .trip_recommend {
+            width: 1250px; margin: 0 auto;
+        }
+        .trip_recommend .title {}
+        .trip_recommend .title h2 {}
+        .trip_recommend .title .more {}
+        .trip_recommend .recommend_slide {}/* 추천 여행지 슬라이드 시작 */
+        .trip_recommend .recommend_slide .swiper-wrapper {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container {
+            background-image: url(https://ak-d.tripcdn.com/images/01055120008ji2uc75021_C_1200_800_R5_Q60.webp?proc=source/trip&proc=source/trip);
+            background-size: cover; background-position: center;
+            display: flex; flex-flow: column nowrap; height: 400px;
+            justify-content: space-between; padding: 15px; border-radius: 20px;
+        }/* 상품본문링크 */
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .best_keyword {
+            
+        }
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .best_keyword img {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .keyword_group {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .keyword_group p {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .keyword_group p img {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .travel_name {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .review_score {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .review_score .score {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .review_score .review {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .wish_trip {
+            position: absolute; right: 15px; top: 15px;
+        }/* 관심상품(하트) */
+        /* ---------------------------------------------- 트립닷컴 호텔 */
+        .trip_hotel {
+            width: 1250px; margin: 0 auto;
+            padding: 50px; 
+        }
+        .trip_hotel .title {
+            display: flex;
+            justify-content: space-between; align-items: center;
+            margin-bottom: 20px;
+        }
+        .trip_hotel .title h2 {}
+        .trip_hotel .title .more {}
+        .trip_hotel .all {position: relative;}
+        .trip_hotel .hotel_prev {transform: translateX(-60px);}
+        .trip_hotel .hotel_next {transform: translateX(60px);}
+        .trip_hotel .hotel_page {transform: translateY(60px);}
+        .trip_hotel .hotel_slide {}
+        .trip_hotel .hotel_slide .swiper-wrapper {}
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide {
+            border: 1px solid #000; border-radius: 20px; 
+            overflow: hidden;
+        }
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide .container {}/* 본문링크 */
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide .container .photo {
+            width: 300px; height: 220px; overflow: hidden;
+        }
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide .container .photo img {
+            width: 100%; height: 100%;
+            transition: transform 0.3s;
+        }
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide .container:hover .photo img {
+            transform: scale(1.07);
+        }
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide .container .info {
+            height: 180px; 
+            padding: 15px; display: flex; flex-flow: column nowrap;
+            justify-content: space-between;
+        }
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide .container .info .details .keyword {}
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide .container .info .details h3 {}
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide .container .info .details h3 img {}
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide .container .info .details .review {}
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide .container .info .details .review p {}
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide .container .info .details .review p span {}
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide .container .info .details .price {}
+        .trip_hotel .hotel_slide .swiper-wrapper .swiper-slide .wish_hotel {
+            position: absolute; top: 15px; right: 15px;
+        }
     </style>
 </head>
 <body>
@@ -263,9 +340,308 @@
         </div>
     </section>
 
-
     <!-- 트립닷컴 -->
-
+    <section class="trip_recommend">
+        <div class="title">
+            <h2>이런 곳은 어떠세요?</h2>
+            <a href="#" class="more">더 보기</a>
+        </div>
+        <div class="swiper recommend_slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide trip1">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <div class="keyword_group">
+                                <p>런던</p>
+                                <p><img src="" alt="">9.8</p>
+                            </div>
+                            <h3 class="travel_name">상하이 디즈니랜드</h3>
+                            <p class="review_score">
+                                <span class="score">4.7/5</span>
+                                <span class="review">리뷰 309,763개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip2">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <div class="keyword_group">
+                                <p>런던</p>
+                                <p><img src="" alt="">9.8</p>
+                            </div>
+                            <h3 class="travel_name">상하이 디즈니랜드</h3>
+                            <p class="review_score">
+                                <span class="score">4.7/5</span>
+                                <span class="review">리뷰 309,763개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip3">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <div class="keyword_group">
+                                <p>런던</p>
+                                <p><img src="" alt="">9.8</p>
+                            </div>
+                            <h3 class="travel_name">상하이 디즈니랜드</h3>
+                            <p class="review_score">
+                                <span class="score">4.7/5</span>
+                                <span class="review">리뷰 309,763개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip4">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <div class="keyword_group">
+                                <p>런던</p>
+                                <p><img src="" alt="">9.8</p>
+                            </div>
+                            <h3 class="travel_name">상하이 디즈니랜드</h3>
+                            <p class="review_score">
+                                <span class="score">4.7/5</span>
+                                <span class="review">리뷰 309,763개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip5">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <div class="keyword_group">
+                                <p>런던</p>
+                                <p><img src="" alt="">9.8</p>
+                            </div>
+                            <h3 class="travel_name">상하이 디즈니랜드</h3>
+                            <p class="review_score">
+                                <span class="score">4.7/5</span>
+                                <span class="review">리뷰 309,763개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip6">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <div class="keyword_group">
+                                <p>런던</p>
+                                <p><img src="" alt="">9.8</p>
+                            </div>
+                            <h3 class="travel_name">상하이 디즈니랜드</h3>
+                            <p class="review_score">
+                                <span class="score">4.7/5</span>
+                                <span class="review">리뷰 309,763개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip7">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <div class="keyword_group">
+                                <p>런던</p>
+                                <p><img src="" alt="">9.8</p>
+                            </div>
+                            <h3 class="travel_name">상하이 디즈니랜드</h3>
+                            <p class="review_score">
+                                <span class="score">4.7/5</span>
+                                <span class="review">리뷰 309,763개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip8">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <div class="keyword_group">
+                                <p>런던</p>
+                                <p><img src="" alt="">9.8</p>
+                            </div>
+                            <h3 class="travel_name">상하이 디즈니랜드</h3>
+                            <p class="review_score">
+                                <span class="score">4.7/5</span>
+                                <span class="review">리뷰 309,763개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="" alt="관심여행지등록"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- 트립닷컴 호텔 -->
+    <section class="trip_hotel">
+        <div class="title">
+            <h2>트립닷컴이 엄선한 호텔에서 아늑한 휴식을 즐겨보세요</h2>
+            <a href="#" class="more">더 보기</a>
+        </div>
+        <div class="all">
+            <div class="swiper hotel_slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide hotel1">
+                        <a href="#" class="container">
+                            <p class="photo"><img src="https://ak-d.tripcdn.com/images/20020g00000086hp40711_R_960_660_R5_D.jpg" alt="사진"></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="keyword">로마</p>
+                                    <h3>J K 플레이스 로마 <img src="#" alt="별점"></h3>
+                                    <div class="review">
+                                        <p><span>9.8</span>/10</p>
+                                        <p>리뷰 72개</p>
+                                    </div>
+                                </div>
+                                <p class="price">최저가 1,193,276원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel2">
+                        <a href="#" class="container">
+                            <p class="photo"><img src="https://ak-d.tripcdn.com/images/20020g00000086hp40711_R_960_660_R5_D.jpg" alt="사진"></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="keyword">로마</p>
+                                    <h3>J K 플레이스 로마 <img src="#" alt="별점"></h3>
+                                    <div class="review">
+                                        <p><span>9.8</span>/10</p>
+                                        <p>리뷰 72개</p>
+                                    </div>
+                                </div>
+                                <p class="price">최저가 1,193,276원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel3">
+                        <a href="#" class="container">
+                            <p class="photo"><img src="https://ak-d.tripcdn.com/images/20020g00000086hp40711_R_960_660_R5_D.jpg" alt="사진"></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="keyword">로마</p>
+                                    <h3>J K 플레이스 로마 <img src="#" alt="별점"></h3>
+                                    <div class="review">
+                                        <p><span>9.8</span>/10</p>
+                                        <p>리뷰 72개</p>
+                                    </div>
+                                </div>
+                                <p class="price">최저가 1,193,276원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel4">
+                        <a href="#" class="container">
+                            <p class="photo"><img src="https://ak-d.tripcdn.com/images/20020g00000086hp40711_R_960_660_R5_D.jpg" alt="사진"></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="keyword">로마</p>
+                                    <h3>J K 플레이스 로마 <img src="#" alt="별점"></h3>
+                                    <div class="review">
+                                        <p><span>9.8</span>/10</p>
+                                        <p>리뷰 72개</p>
+                                    </div>
+                                </div>
+                                <p class="price">최저가 1,193,276원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel5">
+                        <a href="#" class="container">
+                            <p class="photo"><img src="https://ak-d.tripcdn.com/images/20020g00000086hp40711_R_960_660_R5_D.jpg" alt="사진"></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="keyword">로마</p>
+                                    <h3>J K 플레이스 로마 <img src="#" alt="별점"></h3>
+                                    <div class="review">
+                                        <p><span>9.8</span>/10</p>
+                                        <p>리뷰 72개</p>
+                                    </div>
+                                </div>
+                                <p class="price">최저가 1,193,276원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel6">
+                        <a href="#" class="container">
+                            <p class="photo"><img src="https://ak-d.tripcdn.com/images/20020g00000086hp40711_R_960_660_R5_D.jpg" alt="사진"></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="keyword">로마</p>
+                                    <h3>J K 플레이스 로마 <img src="#" alt="별점"></h3>
+                                    <div class="review">
+                                        <p><span>9.8</span>/10</p>
+                                        <p>리뷰 72개</p>
+                                    </div>
+                                </div>
+                                <p class="price">최저가 1,193,276원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel7">
+                        <a href="#" class="container">
+                            <p class="photo"><img src="https://ak-d.tripcdn.com/images/20020g00000086hp40711_R_960_660_R5_D.jpg" alt="사진"></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="keyword">로마</p>
+                                    <h3>J K 플레이스 로마 <img src="#" alt="별점"></h3>
+                                    <div class="review">
+                                        <p><span>9.8</span>/10</p>
+                                        <p>리뷰 72개</p>
+                                    </div>
+                                </div>
+                                <p class="price">최저가 1,193,276원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel8">
+                        <a href="#" class="container">
+                            <p class="photo"><img src="https://ak-d.tripcdn.com/images/20020g00000086hp40711_R_960_660_R5_D.jpg" alt="사진"></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="keyword">로마</p>
+                                    <h3>J K 플레이스 로마 <img src="#" alt="별점"></h3>
+                                    <div class="review">
+                                        <p><span>9.8</span>/10</p>
+                                        <p>리뷰 72개</p>
+                                    </div>
+                                </div>
+                                <p class="price">최저가 1,193,276원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 슬라이드 바깥 디자인 위치 -->
+            <div class="swiper-button-prev hotel_prev"></div>
+            <div class="swiper-button-next hotel_next"></div>
+            <div class="swiper-pagination hotel_page"></div>
+            <div class="swiper-scrollbar hotel_scroll"></div>
+        </div>
+    </section>
 
     <script>
         // 연습용 내부스크립트 js 위치
@@ -289,6 +665,30 @@
             },
         });
         // 트립닷컴 클론스크립트
+        const tripSlide = new Swiper('.recommend_slide',{
+            slidesPerView:4,
+            spaceBetween: 20,
+        });
+        // 트립닷컴 호텔
+        const hotelSlide = new Swiper('.hotel_slide',{
+            slidesPerView:4,
+            spaceBetween: 20,
+            // 페이지 이전 다음버튼
+            navigation:{
+                prevEl:'.hotel_prev',
+                nextEl:'.hotel_next',
+            },
+            pagination: {
+                el: '.hotel_page',
+                //type:'bullets'(기본)
+                //type:'fraction' (숫자)
+                //type:'progressbar' (바)
+                type:'fraction',
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
     </script>
 </body>
 </html>
